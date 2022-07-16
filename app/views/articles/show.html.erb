@@ -1,0 +1,14 @@
+<%= render "navbar" %>
+<div class="container">
+  <h1><%= @article.title %>
+    <%= link_to article_path, method: :delete, data: { confirm: "Are you sure you want to delete #{@article.title}?" } do %>
+      <i class="fas fa-trash-alt fa-xs"></i>
+    <% end %>
+    <%= link_to edit_article_path do %>
+    <i class="fas fa-pen fa-xs"></i>
+    <% end %>
+  </h1>
+  <hr>
+
+  <p><%= @article.content %></p>
+</div>
